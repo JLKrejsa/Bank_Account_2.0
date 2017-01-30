@@ -12,6 +12,18 @@ namespace Bank_Account_2._0
         private float checkBalance;
 
         //properties
+
+        public string AccountType
+        {
+            get { return this.accountType; }
+            set { this.accountType = "Checking"; }
+        }
+
+        public float CheckBalance
+        {
+            get { return this.checkBalance; }
+            set { this.checkBalance = value; }
+        }
         //methods?
     }
 }

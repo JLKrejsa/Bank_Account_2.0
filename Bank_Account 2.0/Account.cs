@@ -47,7 +47,17 @@ namespace Bank_Account_2._0
 
         public void Deposit()
         {
+            Console.WriteLine("Enter deposit amount");
+            float depositAmountEntry = float.Parse(Console.ReadLine());
+            this.beginBalance += depositAmountEntry;
+            
+        }
 
+        public void Withdraw()
+        {
+            Console.WriteLine("Enter withdraw amount");
+            float withdrawAmountEntry = float.Parse(Console.ReadLine());
+            this.beginBalance += withdrawAmountEntry;
         }
     }
 }
