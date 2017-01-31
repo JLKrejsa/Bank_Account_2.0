@@ -14,8 +14,21 @@ namespace Bank_Account_2._0
             Console.WriteLine("Welcome to the Bank of Krejsa-Kupresanin");
             Console.WriteLine("How may we serve you today?");
 
+            //intances of acccounts
+            //Account Account = new Account("Jordan", "Belfort", 1000);
+            //Checking CheckingAccount = new Checking("Jordan", "Belfort", 1000);
+            //Reserve ReserveAccount = new Reserve("Jordan", "Belfort", 1000);
+            //Savings SavingsAccount = new Savings("Jordan", "Belfort", 1000);
+
+
+
+
             Account account1 = new Account();
             Account balance1 = new Account();
+            Account clientName = new Account();
+            Account beginBalance = new Account();
+            Account accountNumber = new Account();
+            Checking check1 = new Checking();
 
             List<string> Menu = new List<string>();
             while (true)

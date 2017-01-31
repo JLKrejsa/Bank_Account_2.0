@@ -9,9 +9,9 @@ namespace Bank_Account_2._0
     class Account
     {
         //fields
-        private string clientName = "Gillain Kate";
+        private string clientName = "Gillian Kate";
         private int accountNumber = 020906;
-        private float beginBalance = 0;
+        private float beginBalance = 0f;
 
         //properties
         public string ClientName
@@ -20,17 +20,29 @@ namespace Bank_Account_2._0
             set { this.clientName = "Gillian Kate"; }
         }
 
-        protected int AccountNumber
+        public int AccountNumber
         {
             get { return this.accountNumber; }
             set { this.accountNumber = 020906; }
         }
 
-        protected float BeginBalance
+        public float BeginBalance
         {
             get { return this.beginBalance; }
             set { this.beginBalance = 0; }
         }
+        //constructor
+        public Account(string clientName, int accountNumber, float beginBalance)
+        {
+            this.ClientName = clientName;
+            this.AccountNumber = accountNumber;
+            this.BeginBalance = beginBalance;
+        }
+
+        public Account()
+        {
+        }
+
 
         //methods
         public void AccountSummary()
