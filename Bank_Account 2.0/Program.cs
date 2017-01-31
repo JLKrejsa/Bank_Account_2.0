@@ -26,9 +26,11 @@ namespace Bank_Account_2._0
             Account account1 = new Account();
             Account balance1 = new Account();
             Account clientName = new Account();
-            Account beginBalance = new Account();
             Account accountNumber = new Account();
+
             Checking check1 = new Checking();
+            Savings save1 = new Savings();
+            Reserve reserve1 = new Reserve();
 
             List<string> Menu = new List<string>();
             while (true)
@@ -49,19 +51,16 @@ namespace Bank_Account_2._0
                 {
                     account1.AccountSummary();
                 }
-
                 else if (menuChoice == 2) ;
-                {
-                    balance1.Balance();
-                }
+                    Console.WriteLine("Checking Balance: " + check1.CheckBalance);
+                
                 else if (menuChoice == 3) ;
-                {
-                    
-                }
+                    Console.WriteLine("Savings Balance: " + save1.SaveBalance);
+                
                 else if (menuChoice == 4) ;
-                {
-
-                }
+                
+                Console.WriteLine("Reserve Balance: " + reserve1.ReserveBalance);
+                            
                 else if (menuChoice == 5) ;
                 {
                     Console.WriteLine("Choose Account for Deposit");
@@ -69,46 +68,56 @@ namespace Bank_Account_2._0
                     Console.WriteLine("Enter 2 for Savings");
                     Console.WriteLine("Enter 3 for Reserve");
                     int depositAccount = int.Parse(Console.ReadLine());
-                    
 
-                    if(depositAccount == 1)
-                    {
 
-                    }
+                    if (depositAccount == 1)
+
+                        check1.Deposit();
+
 
                     else if (depositAccount == 2)
-                    {
 
-                    }
-                    else if(depositAccount == 3)
-                    {
+                        save1.SaveDeposit();
 
-                    }
+                    else if (depositAccount == 3)
 
-                   
-
+                        reserve1.ReserveDeposit();
                 }
-                else if (menuChoice == 6) ;
+           
+                        else if (menuChoice == 6) ;
                 {
+                    Console.WriteLine("Choose Account for Withdrawal");
+                    Console.WriteLine("Enter 1 for Checking");
+                    Console.WriteLine("Enter 2 for Savings");
+                    Console.WriteLine("Enter 3 for Reserve");
+                    int withdrawAccount = int.Parse(Console.ReadLine());
 
+
+                    if (withdrawAccount == 1)
+                    {
+                        check1.Withdraw();
+                    }
+
+                    else if (withdrawAccount == 2)
+                    {
+                        save1.SaveWithdraw();
+                    }
+                    else if (withdrawAccount == 3)
+                    {
+                        reserve1.ReserveWithdraw();
+                    }
                 }
-                else (menuChoice == 7):
-                {
-                    Console.WriteLine("Thank you. Please visit again.");
-                    Console.ReadKey();
-                    Console.Clear();
-                    Environment.Exit(0);
-                }
+                    
+                        else if (menuChoice == 7) ;
+                    {
+                        Console.WriteLine("Thank you. Please visit again.");
+                        Console.ReadKey();
+                        Console.Clear();
+                        Environment.Exit(0);
+                    }
 
-            //end of while loop
-        }
-            //else if (menuChoice == 3) ;
-            //{
+                } //end of while loop
+            }//end Main   
+        }//class program
+    }//namespace
 
-            //}
-
-
-            //end Main
-        }
-    }
-}

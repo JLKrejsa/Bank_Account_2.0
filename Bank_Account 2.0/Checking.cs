@@ -11,7 +11,7 @@ namespace Bank_Account_2._0
         private string accountType = "Checking";
         private float checkBalance;
 
-        Checking check1 = new Checking();
+
 
         //properties
 
@@ -26,41 +26,43 @@ namespace Bank_Account_2._0
             get { return this.checkBalance; }
             set { this.checkBalance = value; }
         }
+
+       
+
         //constructor
         public Checking (string acccountType, float checkBalance) : base ()
         {
             this.accountType = "Checking";
             this.checkBalance = 200f;
-            this.BeginBalance = 0f;
+            
         }
 
-
-
-        //method
-
-       public float CheckDeposit()
+        public Checking()
         {
-            this.checkBalance += depositAmountEntry;
-            return base.Deposit(depositAmount);
         }
-    }
+
+
 
         //method
-        //public override float Deposit(float depositInput)
-        //{
-        //    this.checkBalance += depositInput;
-        //    return base.Deposit(depositInput);
-        //}
 
-        ////SAME FORMAT FOR WITHDRAW BUT USE -= in method
+        public float Deposit()
+        {
+            Console.WriteLine("Enter deposit amount");
+            float depositAmountEntry = float.Parse(Console.ReadLine());
+            this.checkBalance += depositAmountEntry;
+            return checkBalance;
+        }
 
-        //public override void PrintAccountBalance()
-        //{
-        //    //info that you want to show when user want to print the account balance such as CW(CheckBalance);
-       
-        //once you have this down for checking you can copy and paste it into savings 
-        //and reserve and just change the variables respectively
+        public float Withdraw()
+        {
+            Console.WriteLine("Enter withdraw amount");
+            float withdrawAmountEntry = float.Parse(Console.ReadLine());
+            this.checkBalance += withdrawAmountEntry;
+            return checkBalance;
+        }
+
         
+
 
     }
 }
