@@ -1,0 +1,4 @@
+Bank_Account_2._0.Account
+Account Number: Bank_Account_2._0.Account
+Account Type: Reserve
+Balance: 300

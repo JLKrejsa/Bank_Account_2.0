@@ -9,7 +9,7 @@ namespace Bank_Account_2._0
     class Checking:Account
     {
         private string accountType = "Checking";
-        private float checkBalance;
+        private float checkBalance = 200f;
 
 
 
@@ -51,6 +51,7 @@ namespace Bank_Account_2._0
             float depositAmountEntry = float.Parse(Console.ReadLine());
             this.checkBalance += depositAmountEntry;
             return checkBalance;
+            //Console.WriteLine("Balance: $" + checkBalance);
         }
 
         public float Withdraw()
@@ -59,9 +60,10 @@ namespace Bank_Account_2._0
             float withdrawAmountEntry = float.Parse(Console.ReadLine());
             this.checkBalance += withdrawAmountEntry;
             return checkBalance;
+            //Console.WriteLine("Balance: $" + checkBalance);
         }
 
-        
+
 
 
     }

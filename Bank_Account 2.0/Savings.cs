@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Bank_Account_2._0
 {
-    class Savings:Account
+    class Save : Account
     {
         private string accountTypeS = "Saving";
-        private float saveBalance;
+        private float saveBalance = 200f;
 
         //properties
         public string AccountTypeS
@@ -21,35 +21,21 @@ namespace Bank_Account_2._0
         public float SaveBalance
         {
             get { return this.saveBalance; }
-            set { this.saveBalance = 200; }
+            set { this.saveBalance = 200f; }
         }
 
 
 
         ////constructor
-        public Savings(string acccountType, float saveBalance) : base()
+        public Save(string acccountType, float saveBalance) : base()
         {
             this.accountTypeS = "Saving";
             this.saveBalance = 200f;
         }
 
-        public Savings()
+        public Save()
         {
         }
-
-        //constructor
-        //public Savings(string acccountTypeS, float saveBalance) : base ()
-        //{
-        //    this.accountTypeS = "Savings";
-        //    this.saveBalance = 200f;
-
-    
-
-        //public Savings()
-        //{
-
-        //}
-
 
 
         //methods

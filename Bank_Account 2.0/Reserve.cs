@@ -8,8 +8,8 @@ namespace Bank_Account_2._0
 {
     class Reserve
     {
-        private string accountTypeR;
-        private float reserveBalance;
+        private string accountTypeR = "Reserve";
+        private float reserveBalance = 300f;
 
         //properties
         public string AccountTypeR
@@ -18,17 +18,17 @@ namespace Bank_Account_2._0
             set { this.accountTypeR = "Reserve"; }
         }
 
-        public string ReserveBalance { get; internal set; }
+       
 
-        //public float reserveBalance
-        //{
-        //    get { return this.reserveBalance; }
-        //    set { this.reserveBalance = 300f; }
-        //}
+        public float ReserveBalance
+        {
+            get { return this.reserveBalance; }
+            set { this.reserveBalance = value; }
+        }
 
 
         //constructor
-        public Reserve(string acccountTypeR, float reserveBalance) : base ()
+        public Reserve(string acccountTypeR, float reserveBalance) : base()
         {
             this.accountTypeR = "Reserve";
             this.reserveBalance = 300f;
@@ -55,6 +55,7 @@ namespace Bank_Account_2._0
             float withdrawAmountEntry = float.Parse(Console.ReadLine());
             this.reserveBalance += withdrawAmountEntry;
             return reserveBalance;
+            
         }
 
     }
